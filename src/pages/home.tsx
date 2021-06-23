@@ -17,7 +17,7 @@ const history = useHistory()
 const {signInWithGoogle, user} = useAuth();
 
 
-async function HandleCreateRoom(){
+async function handleCreateRoom(){
     if(!user){
         await signInWithGoogle()
     }
@@ -37,7 +37,7 @@ async function HandleCreateRoom(){
             <main>
                 <div className="main-content">
                     <img src={logoImg} alt="let me ask" />
-                    <button onClick={HandleCreateRoom} className="create-room">
+                    <button onClick={handleCreateRoom} className="create-room">
                         <img src={googleIconImg} alt="logo do google" />
                         Crie sua sala com o Google
                     </button>
